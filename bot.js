@@ -27,5 +27,9 @@ client.user.setGame(`$help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
 
 client.login(process.env.BOT_TOKEN);
